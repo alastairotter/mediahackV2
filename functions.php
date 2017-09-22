@@ -11,4 +11,40 @@ function my_theme_enqueue_styles() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
+wp_enqueue_script('jquery');
+
+function wpb_add_scripts() {
+ 
+wp_enqueue_style('font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.css');
+wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:300', false ); 
+wp_enqueue_style( 'wpb-google-fonts2', 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800,900|Raleway:300', false ); 
+    
+wp_enqueue_script( 'utility-scripts', get_stylesheet_directory_uri() . '/js/script.js', array(), '20151215', true );
+    
+}
+ 
+add_action( 'wp_enqueue_scripts', 'wpb_add_scripts' );
+
+
+
+
+ $args = array(
+//	'width'         => 980,
+//	'height'        => 60,
+	'default-image' => get_stylesheet_directory_uri() . '/images/header.jpg',
+);
+add_theme_support( 'custom-header', $args );
+
+
+
+add_theme_support( 'post-formats', array( 'aside', 'gallery', 'video' ) );
+
+
+// image sizes 
+
+add_theme_support( 'post-thumbnails' );
+
+add_image_size( 'tutorial-thumb', 225, 125, true );
+
 ?>

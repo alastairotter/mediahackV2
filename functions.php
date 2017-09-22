@@ -46,5 +46,6 @@ add_theme_support( 'post-formats', array( 'aside', 'gallery', 'video' ) );
 add_theme_support( 'post-thumbnails' );
 
 add_image_size( 'tutorial-thumb', 225, 125, true );
+add_image_size( 'guides-thumb', 225, 180, true );
 
 ?>

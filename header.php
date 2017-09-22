@@ -41,7 +41,7 @@
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php
 			endif;
 
@@ -73,13 +73,57 @@
 	
 	
 	
+	
+	
 	<div class="lead-image">
 	    
+	    <?php 
+        if ( is_front_page() && is_home() ) : ?>
+	    
+	   <img class="header-image" src="<?php echo get_stylesheet_directory_uri() . '/images/header.jpg'; ?>">
 	   
-	  <img class="header-image" src="<?php echo header_image(); ?>">
+	   <?php
+        else: ?>
+       <img class="header-image" src="<?php echo get_stylesheet_directory_uri() . '/images/header_small.jpg'; ?>">
+       <?php 
+        endif;
+
+        ?>
+<!--	  <img class="header-image" src="<?php echo header_image(); ?>">-->
         
         
 
 	</div>
+	
+	<?php
+    if ( is_front_page() && is_home() ) : ?>
+
+<div class="lead-overlay">Digital & Data Journalism</div>
+   
+   <script>
+   // masthead text
+    var topLeft = jQuery(".lead-overlay").position()
+   
+    
+    jQuery(".lead-overlay").css("top", "250px")
+
+
+
+    
+    window.onscroll = function () { 
+        var scrollPos = jQuery(window).scrollTop();
+        var opacity = (350 - scrollPos)/350; 
+        var pos = (topLeft.left - scrollPos);
+        
+        
+        jQuery(".lead-overlay").css("opacity", opacity);
+
+    }
+    
+    </script>
+    
+    <?php
+    endif; 
+    ?>
 
 	<div id="content" class="site-content">

@@ -112,8 +112,16 @@
     
     window.onscroll = function () { 
         var scrollPos = jQuery(window).scrollTop();
+        
         var opacity = (350 - scrollPos)/350; 
         var pos = (topLeft.left - scrollPos);
+        
+        if(scrollPos > 350) { 
+            jQuery(".lead-overlay").css("display", "none");
+        }
+        else { 
+            jQuery(".lead-overlay").css("display", "block");
+        }
         
         
         jQuery(".lead-overlay").css("opacity", opacity);

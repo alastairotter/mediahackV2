@@ -212,7 +212,9 @@
 //        the_content();
         
         if($post_format !== "aside") { 
-            echo '<a class="more-link" href="' . get_permalink() . '"><div class="read-more">Read More</div></a>';
+            if(!is_single()) { 
+                echo '<a class="more-link" href="' . get_permalink() . '"><div class="read-more">Read More</div></a>';
+            };
         }
 
 

@@ -28,7 +28,9 @@ a:visited {
     color: #00B7D3;
 }
 
-h2 { 
+
+
+h1, h2, h3, h4, h5 { 
     color: #000; 
     font-family: Montserrat, Helvetica, "Helvetica Neue", Helvetica, sans-serif;
 }
@@ -90,12 +92,15 @@ h2 {
 }
 
 nav li { 
-    padding: 10px;
+    
 }
 
 nav li a {
-    
+    padding: 3px 8px;
     color: #000;
+    margin-top: 7px;
+    border-radius: 5px;
+    border: none;
 }
 
 nav { 
@@ -105,6 +110,11 @@ nav {
     font-weight: 400;
     text-transform: uppercase;
     font-size: 80%; 
+}
+
+nav li a:hover { 
+    background: #00BBD6;
+    color: #fff;
 }
 #masthead { 
     width: 100%; 
@@ -140,7 +150,7 @@ nav {
 .site-title { 
     width: auto;
     float: left;
-    margin-right: 100px;
+    margin-right: 50px;
     
 }
 .site-title a { 
@@ -392,10 +402,10 @@ h3.guides-title {
 
 
 .intro-more { 
-    width: 100%; 
+   
     text-align: center;
-        opacity: 1;
-    padding: 3px 5px;
+    opacity: 1;
+/*    padding: 3px 5px;*/
     text-transform: uppercase;
     font-size: 80%;
     background: #fff;
@@ -406,15 +416,30 @@ h3.guides-title {
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
+    text-decoration: none;
+    margin-top: 30px;
     
     
 }
+
+
 .intro-more:hover { 
     cursor: pointer;
     cursor: hand;
     color: #fff;
     background: #00BBD6;
     border: solid 1px #fff;
+}
+
+.intro-more a { 
+    text-decoration: none;
+    display: block;
+    padding: 4px 8px 1px;
+    
+    
+}
+.intro-more a:hover { 
+    color: #fff;
 }
 
 .intro-more .fa-chevron-down { 
@@ -474,6 +499,7 @@ h3.guides-title {
     padding: 0px;
     background: #fff;
     margin-top: 40px;
+    margin-bottom: 0px;
 }
 
 .cat-guide { 
@@ -498,7 +524,13 @@ h3.guides-title {
     font-weight: 300;
     line-height: 24px;
     font-family: Helvetica, "Helvetica Neue", Helvetica, sans-serif;
+   
     
+    
+}
+
+.entry-footer { 
+    padding-bottom: 30px;
 }
 
 .entry-content-video { 
@@ -522,6 +554,12 @@ h3.guides-title {
 .entry-content a:hover { 
     text-decoration: underline; 
 }
+
+.entry-content h3, .entry-content h4 { 
+    font-family: "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #000;
+}
+
 .entry-meta { 
     padding: 10px 30px 0 30px;
     font-size: 80%; 
@@ -654,4 +692,88 @@ input:focus {
 }
 .search-submit { 
     float: right; 
+}
+
+.footnotes { 
+    margin-bottom: 100px;
+    font-size: 90%;
+    background: #00CAE4;
+    line-height: 170%;
+    
+}
+
+.footnotes ul { 
+    list-style: none;
+    font-family: "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    
+/*    text-transform: uppercase;*/
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 0; 
+    padding-left: 0;
+    
+}
+.footnotes ul a { 
+    text-decoration: none;
+    color: #fff;
+}
+
+.footnotes ul a:hover { 
+    text-decoration: underline;
+}
+
+.footwrap { 
+    width: 100%; 
+   
+}
+
+
+.foot { 
+    width: 27%;
+    padding-left: 3%;
+    float: left;
+    
+}
+.foot1, .foot2 { 
+    margin-right: 5%;
+}
+
+.resources { 
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#an-mailchimp-2 { 
+    background: #00cae4;
+}
+#an-mailchimp-2 h2 { 
+    color: #fff;
+}
+
+.post-navigation { 
+    background: #fff;
+    margin-top: 0;
+    width: 100%;
+    padding: 10px;
+    clear: both;
+    background: #00cae4;
+    font-size: 80%;
+}
+
+.nav-previous a, .nav-next a { 
+    padding: 30px;
+    text-decoration: none;
+    text-transform: none;
+    
+    margin-left: 0;
+    color: #fff;
+    font-weight: 500;
+}
+.nav-previous a::before { 
+    content: "< ";
+}
+
+.nav-next a::after { 
+    content: " >";
 }

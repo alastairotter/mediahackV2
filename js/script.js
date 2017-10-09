@@ -12,13 +12,13 @@ jQuery("document").ready( function () {
     jQuery(".search-submit").attr("value", "Go")
 
 
-    jQuery(".intro-more").click( function() { 
-        
-        jQuery(".intro-more").hide(); 
-        jQuery(".p-row2").slideDown("slow")
-        
-    })
-    
+//    jQuery(".intro-more").click( function() { 
+//        
+//        jQuery(".intro-more").hide(); 
+//        jQuery(".p-row2").slideDown("slow")
+//        
+//    })
+//    
     
     
 

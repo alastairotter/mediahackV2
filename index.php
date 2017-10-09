@@ -91,8 +91,10 @@ get_header(); ?>
         
         <div style="clear: both;"></div>
         
-         <div class="intro-more">
+       <div class="intro-more">
+        <a href="<?php echo get_site_url() . '/category/our-work/'; ?>" > 
         More &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </a>
         </div>
         
 
@@ -162,9 +164,12 @@ get_header(); ?>
         <div style="clear: both;"></div>
         
         
-          <div class="intro-more">
+        <div class="intro-more">
+        <a href="<?php echo get_site_url() . '/category/tutorials/'; ?>" > 
         More &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </a>
         </div>
+        
         
         
 	</div>
@@ -306,10 +311,12 @@ get_header(); ?>
         <div style="clear: both;"></div>
         
         
-                
-        <div class="intro-more">
+       <div class="intro-more">
+        <a href="<?php echo get_site_url() . '/category/guides/'; ?>" > 
         More &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </a>
         </div>
+        
         
        
         
@@ -317,52 +324,57 @@ get_header(); ?>
 	<!-- END GUIDES -->
 	
 	
+	<!-- CONTACTS ETC -->
+	<div class="projects how-to footnotes">
 	
+	<div class="footwrap">
 	
-	
-	
-	
-		<main id="main" class="site-main">
-
-		<?php
-            
-        query_posts('cat=-197'); 
+	<div class="foot foot1">
+	    <span class="resources">
+            About Us</span>
+       
+       <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+       
+       <span class="resources">Resources</span>
+       
+       <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-2' ) ); ?>
+        </div>
         
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
+        
+        <div class="foot foot2">
+            <span class="resources">Contact Us</span>
+            <ul>
+                <li><a href="mailto:info@mediahack.co.za">info@mediahack.co.za</a></li>
+                <li><a href="http://twitter.com/media_hack"><i class="fa fa-twitter"></i>&nbsp;Twitter</a></li>
+                <li><a href="https://www.facebook.com/mediahack/"><i class="fa fa-facebook"></i>&nbsp;Facebook</a></li>
+                <li><a href="<?php echo get_site_url() . '/contact'; ?>">More contact details</a></li>
+            </ul>
+            
+            
+            
+            </div>
+        
+        <div class="foot foot3">
+            <?php
+        get_search_form();
+        ?>
+       
+            
+        </div>
+        
+        </div>
+       
+       
+       <div style="clear: both;"></div>
+       
+        </div>
+	
+	
+	
 		
 		
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

@@ -48,4 +48,15 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'tutorial-thumb', 225, 125, true );
 add_image_size( 'guides-thumb', 225, 180, true );
 
+
+// add footer menu
+
+function register_my_menu() {
+  register_nav_menu('footer-menu',__( 'Footer Menu' ));
+    register_nav_menu('footer-menu-2',__( 'Footer Menu 2' ));
+}
+add_action( 'init', 'register_my_menu' );
+
+
+
 ?>

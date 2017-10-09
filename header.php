@@ -54,7 +54,7 @@
 					'menu_id'        => 'primary-menu',
 				) );
 			?>
-			<div class="front-social"><i class="fa fa-twitter" aria-hidden="true"></i><i class="fa fa-facebook" aria-hidden="true"></i><i class="fa fa-youtube" aria-hidden="true"></i>
+                 <div class="front-social"><a href="http://twitter.com/media_hack"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="https://www.facebook.com/mediahack/"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/UC8FA0Wn39MaodAfrLyOroZQ"><i class="fa fa-youtube" aria-hidden="true"></i></a>
 </div>
 		</nav><!-- #site-navigation -->
 		

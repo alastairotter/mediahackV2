@@ -40,6 +40,8 @@ get_header(); ?>
         <div class="section-description">
             Our work spans a number of disciplines, from data collection and cleaning through to data analysis, visualisation,, storytelling and bespoke interactive programming. Below is a selection of our published work from in-depth investigative data stories to standalone visualisations. Do you have a project that we could work with you on? <a href="mailto:info@mediahack.co.za">Let's talk</a>.
         </div>
+        
+        <div class="project-holder">
 	    
 	    <?php 
         
@@ -52,18 +54,18 @@ get_header(); ?>
         while ( have_posts() ) : the_post();
         $pUrl = get_post_meta($post->ID, 'project_url', true); 
 
-            if($c == 3) { 
-                $class = "p-box p-right";
-                if($r > 0) { $class .= " p-row2"; }
-            }
-            else { 
-                $class = "p-box p-left";
-                if($r > 0) { $class .= " p-row2"; }
-                
-            }
+//            if($c == 3) { 
+//                $class = "p-box p-right";
+//                if($r > 0) { $class .= " p-row2"; }
+//            }
+//            else { 
+//                $class = "p-box p-left";
+//                if($r > 0) { $class .= " p-row2"; }
+//                
+//            }
         
             
-                echo "<div class='" . $class . "'>";
+                echo "<div class='p-box'>";
                  echo "<a href='" . $pUrl . "'><div class='p-title'>";
                 the_title( '<h3 class="entry-title">', '</h3>' );
                 echo "</div></a>";
@@ -81,17 +83,19 @@ get_header(); ?>
         endwhile;
         
         ?>
+        <div style="clear:both;"></div>
+        </div> <!-- end project holder -->
         
         
         
         
         <div style="clear: both;"></div>
         
-<!--
-        <div class="intro-more">
-        More <i class="fa fa-chevron-down" aria-hidden="true"></i>
+         <div class="intro-more">
+        More &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </div>
--->
+        
+
         
 	</div>
 	
@@ -109,6 +113,8 @@ get_header(); ?>
         <div class="section-description">
             We also train newsrooms and journalists in the essential skills needed to produce quality digital and data journalism. We do on-site training with newsrooms, formal classroom training for beginner and mid-career journalists. We also produce a series of learn-at-your-own-pace video tutorials on our <a href="https://www.youtube.com/channel/UC8FA0Wn39MaodAfrLyOroZQ">YouTube channel</a>. Want to know more? Want to book us for your newsroom? <a href="mailto:info@mediahack.co.za">Get in touch</a>. We'd love to work with you.  
         </div>
+        
+        <div class="project-holder">
 	    
 	    <?php 
         
@@ -121,26 +127,18 @@ get_header(); ?>
         while ( have_posts() ) : the_post();
 //        $pUrl = get_post_meta($post->ID, 'project_url', true); 
 
-            if($c == 3) { 
-                $class = "p-box p-right p-tutorial";
-                if($r > 0) { $class .= " p-row2"; }
-            }
-            else { 
-                $class = "p-box p-left p-tutorial";
-                if($r > 0) { $class .= " p-row2"; }
-                
-            }
+            
         
             
-                echo "<div class='" . $class . "'>";
+                echo "<div class='p-box p-tutorial'>";
         
                 
                  // title in here
         
         echo "<a href='" . esc_url( get_permalink() ) . "'>";
-                the_post_thumbnail('tutorial-thumb', array('class' => 'tutorial-thumb')); 
+                the_post_thumbnail('guides-thumb', array('class' => 'tutorial-thumb')); 
         
-        echo "<div class='video'><i class='fa fa-video-camera' aria-hidden='true'></i></div>";
+//        echo "<div class='video'><i class='fa fa-video-camera' aria-hidden='true'></i></div>";
         
                 the_title( '<h3 class="tutorial-title">', '</h3>' );
                 echo "</a>";
@@ -158,20 +156,16 @@ get_header(); ?>
         
         ?>
         
-        
-        
+        <div style="clear: both;"></div>
+        </div> <!-- end project-holder -->
         
         <div style="clear: both;"></div>
         
-        <?php 
-            if($more) { 
-                ?>
-                
-        <div class="intro-more">
-        More <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        
+          <div class="intro-more">
+        More &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </div>
         
-        <?php } ?>
         
 	</div>
 	<!-- END OUR TUTORIALS -->
@@ -255,6 +249,8 @@ get_header(); ?>
         <div class="section-description">
             We also train newsrooms and journalists in the essential skills needed to produce quality digital and data journalism. We do on-site training with newsrooms, formal classroom training for beginner and mid-career journalists. We also produce a series of learn-at-your-own-pace video tutorials on our <a href="https://www.youtube.com/channel/UC8FA0Wn39MaodAfrLyOroZQ">YouTube channel</a>. Want to know more? Want to book us for your newsroom? <a href="mailto:info@mediahack.co.za">Get in touch</a>. We'd love to work with you.  
         </div>
+        
+        <div class="project-holder">
 	    
 	    <?php 
         
@@ -267,29 +263,26 @@ get_header(); ?>
         while ( have_posts() ) : the_post();
 //        $pUrl = get_post_meta($post->ID, 'project_url', true); 
 
-            if($c == 3) { 
-                $class = "p-box p-right p-guides";
-                if($r > 0) { $class .= " p-row2"; }
-            }
-            else { 
-                $class = "p-box p-left p-guides";
-                if($r > 0) { $class .= " p-row2"; }
-                
-            }
+            
         
             
-                echo "<div class='" . $class . "'>";
+                echo "<div class='p-box p-tutorial'>";
         
                 
                  // title in here
         
         echo "<a href='" . esc_url( get_permalink() ) . "'>";
                 the_post_thumbnail('guides-thumb', array('class' => 'tutorial-thumb')); 
+            echo "</a>";
         
+//        echo "<div class='video'><i class='fa fa-video-camera' aria-hidden='true'></i></div>";
         
-        
-                the_title( '<h3 class="guides-title">', '</h3>' );
-                echo "</a>";
+               echo "<a href='" . esc_url( get_permalink() ) . "'>";
+            the_title( '<h3 class="tutorial-title">', '</h3>' );
+            echo "</a>";
+                
+                echo "<div style='clear:both;'></div>";
+//            echo "</a>";
                
                 echo "</div>";
             
@@ -304,20 +297,21 @@ get_header(); ?>
         
         ?>
         
+        <div style="clear: both;"> </div>
+        </div> <!-- end project-holder -->
+        
         
         
         
         <div style="clear: both;"></div>
         
-        <?php 
-            if($more) { 
-                ?>
+        
                 
         <div class="intro-more">
-        More <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        More &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </div>
         
-        <?php } ?>
+       
         
 	</div>
 	<!-- END GUIDES -->

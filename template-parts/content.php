@@ -14,6 +14,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <?php
+
     
     $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -206,7 +207,9 @@
 	
 	
 		<?php
-        the_content();
+    if( is_single()) { the_content(); }
+    else { the_excerpt();}
+//        the_content();
         
         if($post_format !== "aside") { 
             echo '<a class="more-link" href="' . get_permalink() . '"><div class="read-more">Read More</div></a>';
